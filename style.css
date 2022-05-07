@@ -1,0 +1,254 @@
+
+
+:root {
+    --mtc: rgb(0, 0, 0);
+    --nbg: rgba(36, 20, 53, 0.979);
+    --lhc: rgb(252, 243, 243);
+    --ntc: rgb(181, 174, 174);
+    --sbgc: rgba(255, 255, 255, 0.712);
+    --wh: #fff;
+    --blk: black;
+    --tsb: rgba(244, 243, 243, 0.941);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.temp {
+    width: 100%;
+    height: 10em;
+}
+
+.temp .searchboxtop {
+    display: none;
+}
+
+.header {
+    width: 100%;
+    height: 10%;
+    background-color: var(--nbg);
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+.brand {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    user-select: none;
+}
+
+.brand h1 {
+    position: absolute;
+    left: 0.5em;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: var(--lhc);
+}
+
+.links {
+    width: 85%;
+    height: 100%;
+    font-family: Tahoma;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    user-select: none;
+}
+
+.searchbox {
+    width: 20%;
+    position: relative;
+    left: 0;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+
+#search {
+    width: 100%;
+    height: 2.5em;
+    background: transparent;
+    border: 1px solid var(--ntc);
+    outline: none;
+    border-radius: 25px;
+    padding: 0 35px 0 10px;
+    color: var(--wh);
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+#search:hover {
+    border-color: var(--wh);
+}
+
+::placeholder {
+    color: var(--ntc);
+}
+
+#search:focus {
+    border: 2px solid var(--wh);
+}
+
+.searchbox .bx-search {
+    font-size: 20px;
+    color: var(--wh);
+    position: relative;
+    left: -30px;
+}
+
+
+
+.links ul {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+
+
+
+
+.links ul li {
+    cursor: pointer;
+    color: var(--ntc);
+}
+
+.links ul li:hover {
+    color: var(--lhc);
+}
+
+.bottom {
+    display: none;
+}
+
+
+.contents {
+    color: var(--mtc);
+    padding: 0 2em 0 2em;
+}
+
+.contents h1 {
+    letter-spacing: 1px;
+}
+
+.contents p {
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 28px;
+    font-style: italic;
+}
+
+
+
+
+@media screen and (max-width: 778px) {
+    .temp {
+        height: 5em;
+        width: 100%;
+        display: flex;
+        position: fixed;
+        background-color: var(--tsb);
+    }
+
+    .temp .searchboxtop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        color: var(--blk);
+        padding: 1em 1em 0 1em;
+    }
+
+    #searchtop {
+        width: 100%;
+        height: 2em;
+        border: 2px solid var(--blk);
+        border-radius: 25px;
+        outline: none;
+        padding: 0 1em 0 2.5em;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .searchboxtop .bx-search {
+        width: 0%;
+        color: var(--blk);
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+        left: 10px;
+    }
+
+
+    
+
+    .header .brand,
+    .header .links {
+        display: none;
+    }
+
+    .header {
+        top: calc(100% - 10%);
+    }
+
+    .bottom {
+        width: 100%;
+        height: 100%;
+        background-color: var(--nbg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bottom .icon {
+        width: calc(100% / 5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bottom i {
+        font-size: 23px;
+        color: var(--ntc);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bottom i:hover {
+        font-size: 26px;
+        color: var(--lhc);
+    }
+
+    .contents {
+        padding: 6em 1em 6em 1em;
+    }
+
+}
